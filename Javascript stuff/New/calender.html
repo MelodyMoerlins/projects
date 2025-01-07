@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="capstone.css">
+</head>
+<body>
+       
+    <div id="sidenav">
+        <div>
+            
+        <a href="capstone.html"><i class="fa fa-home clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="profile" ></i>
+            <p class="hide">Home</p></a>
+    
+        <a href="./cart.html"><i class="fa fa-shopping-bag clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="cart" ></i>
+            <p class="hide1">Cart</p></a>
+    
+        <a href="./search.html"><i class="fa fa-search clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="search" ></i>
+        <p class="hide2">Search</p></a>
+    
+        <a href="./community.html"><i class="fa fa-users clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="People" ></i>
+            <p class="hide6">Community</p></a>
+    
+        <a href="./calender.html"><i class="fa fa-calendar clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="calendar" ></i>
+            <p class="hide3">Calendar</p></a>
+    
+        <a href="./settings.html"><i class="fa fa-gears clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="settings" ></i>
+            <p class="hide4">Settings</p></a>
+    
+        <a href="./FAQ.html"><i class="fa fa-comments clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="help" ></i>
+            <p class="hide5">FAQ</p></a>
+        </div>
+    </div>
+
+
+    <table style="float: left; margin-left:70px; color:aliceblue">
+        <tr>
+            <th onclick="back()"><i class="fa fa-angle-double-left" style="font-size:36px; float:left; color:aliceblue;"></i></th>
+            <th id="monthname" colspan="5"></th>
+            <th onclick="forward()"><i class="fa fa-angle-double-right" style="font-size:36px; float:right; color:aliceblue"></i></th>
+        </tr>
+        <tr id="Weekdays">
+            <td>Sun</td>
+            <td>Mon</td>
+            <td>Tue</td>
+            <td>Wed</td>
+            <td>Thu</td>
+            <td>Fri</td>
+            <td>Sat</td>
+        </tr>
+        <tr>
+            <td class="weekday" id="0"></td>
+            <td class="weekday" id="1"></td>
+            <td class="weekday" id="2"></td>
+            <td class="weekday" id="3"></td>
+            <td class="weekday" id="4"></td>
+            <td class="weekday" id="5"></td>
+            <td class="weekday" id="6"></td>
+        </tr>
+        
+        <tr>
+            <td class="weekday" id="7"></td>
+            <td class="weekday" id="8"></td>
+            <td class="weekday" id="9"></td>
+            <td class="weekday" id="10"></td>
+            <td class="weekday" id="11"></td>
+            <td class="weekday" id="12"></td>
+            <td class="weekday" id="13"></td>
+        </tr>
+        
+        <tr>
+            <td class="weekday" id="14"></td>
+            <td class="weekday" id="15"></td>
+            <td class="weekday" id="16"></td>
+            <td class="weekday" id="17"></td>
+            <td class="weekday" id="18"></td>
+            <td class="weekday" id="19"></td>
+            <td class="weekday" id="20"></td>
+        </tr>
+        
+        <tr>
+            <td class="weekday" id="21"></td>
+            <td class="weekday" id="22"></td>
+            <td class="weekday" id="23"></td>
+            <td class="weekday" id="24"></td>
+            <td class="weekday" id="25"></td>
+            <td class="weekday" id="26"></td>
+            <td class="weekday" id="27"></td>
+        </tr>
+        
+        <tr>
+            <td class="weekday" id="28"></td>
+            <td class="weekday" id="29"></td>
+            <td class="weekday" id="30"></td>
+            <td class="weekday" id="31"></td>
+            <td class="weekday" id="32"></td>
+            <td class="weekday" id="33"></td>
+            <td class="weekday" id="34"></td>
+        </tr>
+        <tr>
+            
+            <td class="weekday" id="35"></td>
+            <td class="weekday" id="36"></td>
+        </tr>
+    </table>
+
+<style>
+    td, table{
+        border: aliceblue solid 2px;
+        border-collapse: collapse;
+    }
+    #monthname{
+        font-size: xx-large;
+    }
+    td{
+        font-size: larger;
+        text-align: center;
+    }
+
+    .weekday{
+        height: 100px;
+    }
+</style>
+<script>
+    months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    monthdays = ["31", "28", "31", "30", "31", "30", "31","31","30","31","30","31"];
+
+    weekdays = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"]
+
+
+    const date = new Date();
+    const currentmonth = date.getMonth();
+    const currentyear= date.getFullYear();
+
+   document.getElementById("monthname").innerHTML = months[currentmonth];
+
+    const firstofmonth = new Date(currentyear, currentmonth, 1);
+
+    const weekday = firstofmonth.getDay()
+
+    document.getElementById(weekday).innerHTML = 1
+
+    monthday = monthdays[currentmonth] * 1;
+    weekdai = weekday * 1;
+
+    const minusweekday = monthday + weekdai;
+    console.log(minusweekday)
+
+    for (i = weekday; i < minusweekday; i++){
+        let a = i-weekday;
+        let b = a + 1
+        document.getElementById(i).innerHTML = b;
+    }
+
+    function back(){   
+        
+    months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    
+    monthdays = ["31", "28", "31", "30", "31", "30", "31","31","30","31","30","31"];
+
+    for (let i=0; i < months.length; i++){
+        if (document.getElementById("monthname").innerHTML == months[i]){
+            event.preventDefault();
+            let setmonth = i ;
+            let backmonth = setmonth - 1;
+            let backdate = new Date(currentyear, backmonth)
+            
+            document.getElementById("monthname").innerHTML=months[backmonth];
+            
+            let firstofbackmonth = new Date(currentyear, backmonth, 1);
+            
+            let weekday = firstofbackmonth.getDay();
+            
+            document.getElementById(weekday).innerHTML = 1
+
+            
+            monthday = monthdays[backmonth] * 1;
+            weekdai = weekday * 1;
+
+            
+            const minusweekday = monthday + weekdai;
+            console.log(minusweekday)
+            
+            for (i = 0; i < 36;i++){
+                document.getElementById(i).innerHTML=null
+            }
+
+            for (i = weekday; i < minusweekday; i++){
+                let a = i-weekday;
+                let b = a + 1
+            document.getElementById(i).innerHTML = b;
+            }
+        }
+    }
+
+}
+
+
+function forward(){   
+        
+    months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    
+    monthdays = ["31", "28", "31", "30", "31", "30", "31","31","30","31","30","31"];
+
+    for (let i=0; i < months.length; i++){
+        if (document.getElementById("monthname").innerHTML == months[i]){
+            event.preventDefault();
+            let setmonth = i ;
+            let backmonth = setmonth + 1;
+            let backdate = new Date(currentyear, backmonth)
+            
+            document.getElementById("monthname").innerHTML=months[backmonth];
+            
+            let firstofbackmonth = new Date(currentyear, backmonth, 1);
+            
+            let weekday = firstofbackmonth.getDay();
+            
+            document.getElementById(weekday).innerHTML = 1
+
+            
+            monthday = monthdays[backmonth] * 1;
+            weekdai = weekday * 1;
+
+            
+            const minusweekday = monthday + weekdai;
+            console.log(minusweekday)
+            
+            for (i = 0; i < 36;i++){
+                document.getElementById(i).innerHTML=null
+            }
+
+            for (i = weekday; i < minusweekday; i++){
+                let a = i-weekday;
+                let b = a + 1
+            document.getElementById(i).innerHTML = b;
+            }
+        }
+    }
+
+}
+
+</script>
+</body>
+</html>

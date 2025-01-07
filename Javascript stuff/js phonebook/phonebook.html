@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 10:51 -->
+    <h1>PHONEBOOK</h1>
+    <caption>First Name</caption>
+    <form action="" onsubmit="enterData()">
+    <input type="text" name="first_name" id="firstname" name="firstname" autocomplete="name">
+    <br>
+    <caption>Last Name</caption>
+    <br>
+    <input type="text" name="Last_name" id="lastname" name="firstname" autocomplete="cc-family-name">
+    <br>
+    <caption>Phone Number</caption>
+    <br>
+    <input type="text" name="Phone_number" id="phonenumber" value="" name="firstname" required placeholder="(xxx) xxx-xxxx">
+    <input type="submit">
+    <br>
+    <br>
+        <h2>CONTACTS</h2>
+    <p id="phones">
+    </p>
+</form>
+    <script>
+    function enterData(){
+        event.preventDefault()
+       /* document.getElementById("test").innerText = firstname.value; */
+       let fir = document.getElementById('firstname').value;
+       
+       let pho = document.getElementById('phonenumber').value;
+       
+       let las = document.getElementById('lastname').value;
+       
+       
+    let contact = ("Name:" + " " + fir + " " + las +  " Phone Number: " + pho + "<br>");
+    
+    
+    console.log(contact);
+    document.getElementById("phones").innerHTML += (contact)
+    }
+/*       document.getElementById('phones').innerHTML 
+       += ("\n Name:", text, tex,  "\n Phone Number: ", textt);
+
+
+       console.log("Name:", fir, las,  "\n Phone Number: ", pho);*/
+    </script>
+</body>
+
+
+
+
+
+<!-- </html>
+<form action="" onsubmit="enterData()">
+    <input type="text" id="firstname" name="firstname" required>
+    <input type="submit">
+    <table>
+        <th>
+            Name
+        </th>
+        <tr id="test"></tr>
+    </table>
+</form>
+    <script>
+    function enterData(){
+        console.log(firstname.value)
+    }
+
+    </script> -->

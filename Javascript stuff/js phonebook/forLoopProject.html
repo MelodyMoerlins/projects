@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="loopStart()">
+        <caption>Starting Number</caption>
+        <input type="number" id="start">
+        <br>
+        <br>
+        <caption>Max Number</caption>
+        <input type="number" id="maxN">
+        <br>
+        <br>
+        <caption>Increment</caption>
+        <input type="number" id="increment">
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+
+    <p id="info"></p>
+    <script>
+        function loopStart(){
+            event.preventDefault
+            var max = document.getElementById("maxN").valueAsNumber
+            var star = document.getElementById("start").valueAsNumber
+            var inc = document.getElementById("increment").valueAsNumber
+
+            let i = star;
+            while (i < max) {
+                event.preventDefault();
+                document.getElementById("info").innerHTML += (i + "<br>");
+                i = i + inc;} 
+}         
+
+
+
+
+
+
+                // while (star < max) { 
+                // star++;
+                // console.log(star);
+                // }
+    
+
+    </script>
+</body>
+</html>

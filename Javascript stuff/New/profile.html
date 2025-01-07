@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="capstone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./capstone.js"></script>
+</head>
+<body>
+    
+    <div id="sidenav">
+        <div>
+            
+        <a href="capstone.html"><i class="fa fa-home clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="profile" ></i>
+            <p class="hide">Home</p></a>
+    
+        <a href="./cart.html"><i class="fa fa-shopping-bag clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="cart" ></i>
+            <p class="hide1">Cart</p></a>
+    
+        <a href="./search.html"><i class="fa fa-search clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="search" ></i>
+        <p class="hide2">Search</p></a>
+    
+        <a href="./community.html"><i class="fa fa-users clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="People" ></i>
+            <p class="hide6">Community</p></a>
+    
+        <a href="./calender.html"><i class="fa fa-calendar clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="calendar" ></i>
+            <p class="hide3">Calendar</p></a>
+    
+        <a href="./settings.html"><i class="fa fa-gears clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="settings" ></i>
+            <p class="hide4">Settings</p></a>
+    
+        <a href="./FAQ.html"><i class="fa fa-comments clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="help" ></i>
+            <p class="hide5">FAQ</p></a>
+        </div>
+    </div>
+    <!-- bar at top -->
+    <div></div>
+    <!-- account information -->
+    <div id="accinfo">
+            <p id="newname" style="padding-left: 25px;">Name:</p>
+            <br>
+            <br>
+            <p id="email" style="padding-left: 25px;">Email:</p>
+            <br>
+            <br>
+            <p id="books" style="padding-left: 25px; float:left">Books Bought:</p>
+            <br>
+            <br>
+            <button style="float:right; margin:25px" onclick="logout()">Log out</button>
+            
+            <button style="float:right; margin:25px" onclick="">Orders</button>
+    </div>
+    <!-- logout -->
+    <footer>
+        <input type="button" value="DELETE ACCOUNT?"
+        style="clear: both; float: right; margin-right:50px" onclick="deleted()">
+    </footer>
+     <script>
+        function deleted() {
+            confirm("DELETE ACCOUNT? this action cannot be undone.")
+        }
+        function logout(){
+            window.location.href = "./capstone.html"
+        }
+     </script>
+</body>
+</html>

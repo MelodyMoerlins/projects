@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="capstone.css">
+    <script src="capstone.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="icon" href="./imgs/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTEwL3B4MTQ1NjE3NS1pbWFnZS1qb2IxMjYzXzIucG5n.webp" type="image/x-icon"> -->
+</head>
+<body>
+
+    <div id="heading">
+
+        <i class="fa fa-chevron-right clickable" style="font-size:40px;color:rgb(194, 194, 194);" id="right" onmousedown="clicked()"></i>
+    </div>
+    <div  id="filters">
+        <label id="FilterHeading" class="clickable"  onclick="clickedFilters();" onsubmit="dblClicked();  unPopular()" ondblclick="dblClicked()"> Filters </label><i class="fa fa-angle-down " style="font-size: 20px;color: aliceblue;"></i></label>
+        <br>
+        <form id="hidden" action="">
+
+            <caption id="a">Kids</caption>
+            <input type="checkbox" name="" id="">
+            
+            <caption class="a">Fantasy</caption>
+            <input type="checkbox" name="" id="">
+            
+            <caption class="a">Nonfiction</caption>
+            <input type="checkbox" name="" id="">
+            
+            <caption class="a">Fiction</caption>
+            <input type="checkbox" name="" id="">
+            <br>
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <div id="popularBooks" style="margin-left: 75px;">
+        <h4 >Popular Now:</h4>
+        <table>
+            <tr>
+                <td onclick="options()"><img src="./imgs/1003w-vAt8PH1CmqQ.webp" alt=""><p class="invis">description</p></td>
+
+                <td><img src="./imgs/deathly-hallows-us-childrens-edition.jpg" alt=""><p class="invis">description</p></td>
+                </tr>
+                <tr>
+
+                <td><img src="./imgs/image-placeholder-title.jpg" alt=""> <p class="invis">description</p> <br>Book A </td>
+                <td><img src="./imgs/gatsby-original2.jpg" alt=""> <p class="invis">description</p> <br>Book B</td>
+            </tr>
+            
+            <tr>
+                <td><img src="./imgs/images.jpg" alt=""> <p class="invis">description</p> <br>Book A </td>
+                <td><img src="./imgs/canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg" alt=""> <p class="invis">description</p> <br>Book B</td>
+            </tr>
+        </table>
+    </div>
+<div id="sidenav">
+        <div>
+            
+        <a href="profile.html"><i class="fa fa-user-circle clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="profile" ></i>
+            <p class="hide">Profile</p></a>
+
+        <a href="./cart.html"><i class="fa fa-shopping-bag clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="cart" ></i>
+            <p class="hide1">Cart</p></a>
+
+        <a href="./search.html"><i class="fa fa-search clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="search" ></i>
+        <p class="hide2">Search</p></a>
+
+        <a href="./community.html"><i class="fa fa-users clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="People" ></i>
+            <p class="hide6">Community</p></a>
+
+        <a href="./calender.html"><i class="fa fa-calendar clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="calendar" ></i>
+            <p class="hide3">Calendar</p></a>
+
+        <a href="./settings.html"><i class="fa fa-gears clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="settings" ></i>
+            <p class="hide4">Settings</p></a>
+
+        <a href="./FAQ.html"><i class="fa fa-comments clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="help" ></i>
+            <p class="hide5">FAQ</p></a>
+        </div>
+</div>
+
+</body>
+</html>

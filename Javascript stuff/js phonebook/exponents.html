@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="expon()">
+        <caption>Number</caption>
+        <input type="number" id="Numb">
+        <br>
+        <br>
+        <caption>Exponent</caption>
+        <input type="number" id="exp">
+        <input type="submit">
+    </form>
+    
+    <p id="answer"></p>
+    <script>
+        function expon(){
+        event.preventDefault();
+        var Numb = document.getElementById("Numb").value;
+        var Exp = document.getElementById("exp").value;
+
+        document.getElementById("answer").innerHTML = Numb**Exp
+        console.log(Numb ** Exp);
+        }
+    </script>
+</body>
+</html>

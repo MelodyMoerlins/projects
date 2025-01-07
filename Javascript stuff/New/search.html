@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="capstone.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./capstone.js"></script>
+</head>
+<body>
+    
+<div id="sidenav">
+    <div>
+        
+    <a href="capstone.html"><i class="fa fa-home clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="profile" ></i>
+        <p class="hide">Home</p></a>
+
+    <a href="./cart.html"><i class="fa fa-shopping-bag clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="cart" ></i>
+        <p class="hide1">Cart</p></a>
+
+    <a href="./search.html"><i class="fa fa-search clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="search" ></i>
+    <p class="hide2">Search</p></a>
+
+    <a href="./community.html"><i class="fa fa-users clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="People" ></i>
+        <p class="hide6">Community</p></a>
+
+    <a href="./calender.html"><i class="fa fa-calendar clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="calendar" ></i>
+        <p class="hide3">Calendar</p></a>
+
+    <a href="./settings.html"><i class="fa fa-gears clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="settings" ></i>
+        <p class="hide4">Settings</p></a>
+
+    <a href="./FAQ.html"><i class="fa fa-comments clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="help" ></i>
+        <p class="hide5">FAQ</p></a>
+    </div>
+</div>
+
+<form style="float:left; margin-left:100px; margin-top: 20px">
+
+    <input id="searchbar" type="text" style="background-color:rgb(194, 194, 194); outline:none; height: 25px; font-size:large; font-family:comic sans MS" placeholder="Search...">
+
+    <button onclick="displayBooks()" style="background-color:rgb(194, 194, 194); border-radius:5px; border:none; height: 27px; width: 27px"><i class="fa fa-search"></i></button>
+
+</form>
+
+<p id="answers" style="float:left; clear:left; margin-top:50px; color:aliceblue; font-size:larger; margin-left:100px">
+
+</p>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        #div1, #div2 {
+            border: 1px solid black;
+            padding: 5px;
+            max-width: fit-content;
+        }
+        p{
+            width: min-content;
+            border: black solid thin;
+            display: inline;
+            font-weight: bold;
+            border-radius: 2px;
+        }
+        table{
+            border: black solid thin;
+            border-collapse: collapse;
+        }
+        th{
+            border: black solid thin;
+        }
+        td{
+            border: black solid thin;
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+        function drop(ev){
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+<body>
+    
+<table>
+    <tr>
+    <th>PORTS</th>
+    <th>###'s</th>
+</tr>
+<tr>
+    <td>FTP</td>
+    <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+<tr>
+    <td>SSH</td>
+    <td  ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+<tr>
+    <td>DNS</td>
+    <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+<tr>
+    <td>HTTP</td>
+    <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+<tr>
+    <td>HTTPS</td>
+    <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+<tr>
+    <td>FTPS</td>
+    <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+<tr>
+    <td>SMTP</td>
+    <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+<tr>
+    <td>IMAP</td>
+    <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+
+<tr>
+    <td>POP3</td>
+    <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+
+<tr>
+    <td>TELNET</td>
+    <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+</table>
+<br>
+<br>
+    <!-- options -->
+    <div id="div1" ondrop="drop(event)"
+    ondragover="allowDrop(event)">
+
+    <p draggable="true" ondragstart="drag(event)" id="drag1">20/21</p>
+
+    <p draggable="true" ondragstart="drag(event)" id="drag2">22</p>
+
+    <p draggable="true" ondragstart="drag(event)" id="drag3">53</p>
+
+    <p draggable="true" ondragstart="drag(event)" id="drag4">80</p>
+
+    <p draggable="true" ondragstart="drag(event)" id="drag5">443</p>
+
+    <p draggable="true" ondragstart="drag(event)" id="drag6">990/989</p>
+
+    <p draggable="true" ondragstart="drag(event)" id="drag7">25</p>
+
+    <p draggable="true" ondragstart="drag(event)" id="drag8">143</p>
+
+    <p draggable="true" ondragstart="drag(event)" id="drag9">110</p>
+
+    <p draggable="true" ondragstart="drag(event)" id="drag0">23</p>
+</div>
+<!-- <br><br>
+<table>
+    <tr>
+    <th>PORTS</th>
+    <th>###'s</th>
+</tr>
+<tr>
+    <td>FTP</td>
+    <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+<tr>
+    <td>SSH</td>
+    <td  ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+<tr>
+    <td>DNS</td>
+    <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+<tr>
+    <td>HTTP</td>
+    <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+<tr>
+    <td>HTTPS</td>
+    <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+<tr>
+    <td>FTPS</td>
+    <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+<tr>
+    <td>SMTP</td>
+    <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+<tr>
+    <td>IMAP</td>
+    <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+
+<tr>
+    <td>POP3</td>
+    <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+
+<tr>
+    <td>TELNET</td>
+    <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+</tr>
+</table> -->
+
+
+
+</body>
+</html>

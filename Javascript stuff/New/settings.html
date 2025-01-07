@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="capstone.css">
+</head>
+<body>
+       
+    <div id="sidenav">
+        <div>
+            
+        <a href="capstone.html"><i class="fa fa-home clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="profile" ></i>
+            <p class="hide">Home</p></a>
+    
+        <a href="./cart.html"><i class="fa fa-shopping-bag clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="cart" ></i>
+            <p class="hide1">Cart</p></a>
+    
+        <a href="./search.html"><i class="fa fa-search clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="search" ></i>
+        <p class="hide2">Search</p></a>
+    
+        <a href="./community.html"><i class="fa fa-users clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="People" ></i>
+            <p class="hide6">Community</p></a>
+    
+        <a href="./calender.html"><i class="fa fa-calendar clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="calendar" ></i>
+            <p class="hide3">Calendar</p></a>
+    
+        <a href="./settings.html"><i class="fa fa-gears clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="settings" ></i>
+            <p class="hide4">Settings</p></a>
+    
+        <a href="./FAQ.html"><i class="fa fa-comments clickable" style="font-size:40px;color:rgb(194, 194, 194)" id="help" ></i>
+            <p class="hide5">FAQ</p></a>
+        </div>
+    </div>
+    <div style="margin-left: 75px; float:left; margin-top:50px; color:rgb(194, 194, 194); padding:15px">
+        <h1 style="color:rgb(194, 194, 194);">Settings</h1>
+        <p id="hoverover" class="settings" onclick="clicked()">Language ↓</p>
+    <div id="invisible">
+        <input type="radio" name="lang" id="">
+        <label for="">English</label>
+        <br>
+        <input type="radio" name="lang" id="">
+        <label for="">Spanish</label>
+        <br>
+        <input type="radio" name="lang" id="">
+        <label for="">French</label>
+        <br>
+        <input type="radio" name="lang" id="">
+        <label for="">Enchantment table</label>
+        <br>
+        <input type="radio" name="lang" id="">
+        <label for="">Japanese</label>
+        <br>
+    </div>
+    <br>
+        <p class="settings" onclick="clickedd()">Accessibility ↓</p>
+            <div id="invisss">
+                <p class="settings1">Screen Reader</p>
+                <label for="">On</label>
+                <input type="radio" name="screenread" id="">
+                <label for="">Off</label>
+                <input type="radio" name="screenread" id="">
+                <p class="settings1">Large Text</p>
+                <label for="">On</label>
+                <input type="radio" name="largetext" id="">
+                <label for="">Off</label>
+                <input type="radio" name="largetext" id="">
+                <p class="settings1">Bold text</p>
+                <label for="">On</label>
+                <input type="radio" name="boldtext" id="">
+                <label for="">Off</label>
+                <input type="radio" name="boldtext" id="">
+            </div>
+            <br>
+        <p class="settings" onclick="clickeddd()">Default Payment/Shipping Settings ↓</p>
+            <div id="default">
+                <p class="settings1">Email order confirmation</p>
+                <label for="">On</label>
+                <input type="radio" name="orderss" id="">
+                <label for="">Off</label>
+                <input type="radio" name="orderss" id="">
+                <p class="settings1">Save payment information across devices</p>
+                <label for="">On</label>
+                <input type="radio" name="payment" id="">
+                <label for="">Off</label>
+                <input type="radio" name="payment" id="">
+                <p class="settings1">Address:</p>
+                <input type="text" name="" id="" style="border: none; outline:none; background-color:rgb(194, 194, 194)">
+            </div>
+            <br>
+            <p class="settings" onclick="clickedddd()">Miscellaneous ↓</p>
+            <div id="missed">
+                <p class="settings1">Background Music</p>
+                <label for="">On</label>
+                <input type="radio" name="" id="">
+                <label for="">Off</label>
+                <input type="radio" name="" id="">
+                
+                <p class="settings1">Sound Effects</p>
+                <label for="">On</label>
+                <input type="radio" name="" id="">
+                <label for="">Off</label>
+                <input type="radio" name="" id="">
+            </div>
+        </div>
+    </div>
+    <style>
+        .settings1{
+            font-size: large;
+        }
+        #invisible {
+            display: none;
+        }
+        .settings{
+            font-size: larger;
+        }
+
+        #invisss{
+            display:none;
+        }
+
+        #default{
+            display: none;
+        }
+
+        #missed{
+            display: none;
+        }
+
+
+    </style>
+    <script>
+        function clicked(){
+            if(document.getElementById("invisible").style.display == "block"){
+            document.getElementById("invisible").style.display = "none";
+            } else {
+            document.getElementById("invisible").style.display = "block";
+        }}
+        
+        function clickedd(){
+            if(document.getElementById("invisss").style.display == "block"){
+            document.getElementById("invisss").style.display = "none";
+            } else {
+            document.getElementById("invisss").style.display = "block";
+        }}
+        
+        function clickeddd(){
+            if(document.getElementById("default").style.display == "block"){
+            document.getElementById("default").style.display = "none";
+            } else {
+            document.getElementById("default").style.display = "block";
+        }}
+        
+        function clickedddd(){
+            if(document.getElementById("missed").style.display == "block"){
+            document.getElementById("missed").style.display = "none";
+            } else {
+            document.getElementById("missed").style.display = "block";
+        }}
+    </script>
+</body>
+</html>

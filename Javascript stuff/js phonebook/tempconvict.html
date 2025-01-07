@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <h3>From:</h3>
+        <input type="number" id="star" style="max-width:50px;">
+        <br>
+        <br>
+        <h3>Conversion:</h3>
+        <input type="button" value="Celsius -> Fahrenheit" onclick="test1()">
+        <br>
+        <br>
+        <input type="button" value="Fahrenheit -> Celsius" onclick="test2()">
+
+        <br>
+        <br>
+        <h3>To:</h3> <p style="border: solid gray 1px; border-radius: 3px; width: 56px; height: 19px;" id="output"></p>
+        <br>
+    </form>
+<script>
+function test1(){
+    event.preventDefault();
+    let start = document.getElementById("star").valueAsNumber;
+    let be = start * 1.8;
+    let ans = be + 32;
+    let a = ans.toFixed(2)
+    console.log(a);
+    document.getElementById("output").innerHTML = a;
+}
+function test2(){
+    event.preventDefault();
+    let start = document.getElementById("star").valueAsNumber;
+    let be = start - 32;
+    let ans = be * .556;
+    let a = ans.toFixed(2)
+    console.log(a);
+    document.getElementById("output").innerHTML = a;
+}
+</script>
+</body>
+</html>

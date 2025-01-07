@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <form>
+    <input type="color" id="color">
+    <p id="test">Test</p>
+</form>
+<script>
+        var colourr = document.getElementById("color");
+
+        colourr.addEventListener("input", function(){
+            var theColor = colourr.value;
+            
+        document.getElementById("test").style.color = theColor
+        });
+</script>
+</body>
+</html>
+7:41

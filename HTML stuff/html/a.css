@@ -1,0 +1,35 @@
+/* nav{
+    
+}
+li{
+    display: inline; float: left; 
+}
+ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border: 3px solid rgb(52, 31, 31);
+    display: block;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgb(87, 135, 136);
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+  }
+  
+  li a:hover {
+    background-color:rgb(159, 234, 229);
+  } */

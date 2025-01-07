@@ -1,0 +1,17 @@
+/* Melody 8/29/2024 */
+table{
+    border: solid thin;
+    border-collapse: collapse;
+}
+th{
+    border: solid thin;
+    width: 60px;
+    font-size: 14px;
+}
+td{
+    border: solid thin;
+    font-size: 12px;
+}
+tr:nth-child(even){
+    background-color: gray;
+}
