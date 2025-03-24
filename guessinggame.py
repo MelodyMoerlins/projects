@@ -10,10 +10,10 @@ guess = int(input(f"What's your first guess for a random number between {low} an
 
 while guess != number:
     if number > guess:
-        lower = "higher"
+        direction = "higher"
     else:
-        lower = "lower"
-    print(f"That's wrong. Your number is {lower}")
+        direction = "lower"
+    print(f"That's wrong. Your number is {direction}")
     guess = int(input(f"What's your next guess for a random number between {low} and {high}? "))
 
 if number == guess:
