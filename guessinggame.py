@@ -14,7 +14,7 @@ while guess != number:
     else:
         lower = "lower"
     print(f"That's wrong. Your number is {lower}")
-    guess = int(input(f"What's your first guess for a random number between {low} and {high}? "))
+    guess = int(input(f"What's your next guess for a random number between {low} and {high}? "))
 
 if number == guess:
     print("Congratulations! You won!")
