@@ -5,11 +5,11 @@ word = words[int(random.random()*10)]
 guess = ""
 totalguesscount = 0
 letters = len(word)
-u = ""
+underline = ""
 
 for letters in word:
-    u+="_"
-print(u)
+    underline +="_"
+print(underline)
 
 #plays if you run out of moves or fail to guess the word
 def youlose():
@@ -28,7 +28,7 @@ while guess != word:
     if len(guess) > 1:
         print("Final Guess")
         if guess == word:
-            print("YOU WIN!" + "You made " + str(totalguesscount+letters) + " guesses.")
+            print("YOU WIN!" + "You've made " + str(int(totalguesscount) + letters) + " guesses.")
             break
         else:
             youlose()
@@ -39,7 +39,7 @@ while guess != word:
         totalguesscount += 1
         if totalguesscount <6:
             print("WRONG! Guess again.")
-            print(u)
+            print(underline)
             print("")
             print(" _____")
             print("|     |")
@@ -48,8 +48,8 @@ while guess != word:
     if len(guess) < 2:
         if guess in word:
             letterplace = word.index(guess)
-            u = u[:letterplace] + guess + u[letterplace+1:]
-            print(u)
+            underline = underline[:letterplace] + guess + underline[letterplace+1:]
+            print(underline)
 
     #displays the hangman visually in the console
     if totalguesscount == 1:
