@@ -52,7 +52,9 @@ while guess != word:
             print(underline)
 
     #displays the hangman visually in the console
-    if totalguesscount == 1:
+    if guess in word:
+        continue
+    elif totalguesscount == 1:
         print("|")
         print("|")
         print("|")
